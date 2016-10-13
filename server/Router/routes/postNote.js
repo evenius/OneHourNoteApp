@@ -17,20 +17,22 @@ const postNote = function (req, res) {
     newNote,
     (err, note) => {
       if (err) {
-        console.log(err)
-        return res.status(500).send('error')
-      }
-      db.User.findOneAndUpdate(
-        { user },
-        {$addToSet: {notes: note}},
-        (err) => {
-          if(err) {
-            console.log(err)
-            return res.status(500).send('error')
+        res.status(500).send('error')
+      } else {
+        db.User.findOneAndUpdate(
+          { _id: user._id },
+          {$addToSet: {notes: note}},
+          (err, result) => {
+            if (err) {
+              res.status(500).send('error')
+            } else {
+              // Res.json returns empty for some reason
+              res.set('Content-Type', 'application/json')
+              res.send(JSON.stringify({ slug: note.slug }))
+            }
           }
-          return res.send('ok')
-        }
-      )
+        )
+      }
     }
   )
 }

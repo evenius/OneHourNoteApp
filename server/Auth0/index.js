@@ -8,7 +8,7 @@ const generateAuthStrategy = require('./authStrategy')
 const serializeUser = require('./serializeUser')
 const deserializeUser = require('./deserializeUser')
 
-function init ({ app }, res, next) {
+function bindAuth (app) {
   let { config, db } = app.locals
 
   // Start your session!
@@ -22,7 +22,7 @@ function init ({ app }, res, next) {
   app.use(passport.initialize())
   app.use(passport.session())
 
-  return next()
+  return app
 }
 
-module.exports = init
+module.exports = bindAuth

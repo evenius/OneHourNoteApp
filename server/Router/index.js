@@ -1,7 +1,7 @@
 const Express = require('express')
 const { join } = require('path')
 
-const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn()
+const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn('/login')
 
 const getIndex = require('./routes/getIndex')
 const getLogin = require('./routes/getLogin')
@@ -26,7 +26,9 @@ function bindRoutes (app) {
 
 // Totally, 100% safe/hackproof
   app.get('/', ensureLoggedIn, getIndex)
-  app.post('/notes/:note', ensureLoggedIn, postNote)
+  app.get('/notes/:note', ensureLoggedIn, getIndex)
+
+  app.post('/notes', ensureLoggedIn, postNote)
   app.patch('/notes/:note', ensureLoggedIn, patchNote)
   app.delete('/notes/:note', ensureLoggedIn, deleteNote)
 

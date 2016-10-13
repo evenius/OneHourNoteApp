@@ -3,9 +3,7 @@ const bodyParser = require('body-parser')
 
 const connectMongo = require('./mongo')
 const { bindRoutes } = require('./Router')
-const initAuth = require('./Auth0')
-
-const app = express()
+const bindAuth = require('./Auth0')
 
 /**
  * Starts the server
@@ -13,11 +11,13 @@ const app = express()
  * @param {integer} PORT - the port number used by the applicaiton. Should be same as the docker config.
  */
 const startServer = function (config) {
+  let app = express()
+
   let db = connectMongo(config.database)
   app.locals.db = db
   app.locals.config = config
 
-  app.use(initAuth)
+  app = bindAuth(app)
 
   // Use the embeddedjs view engine
   app.set('view engine', 'ejs')

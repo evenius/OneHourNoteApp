@@ -1,4 +1,4 @@
-//They are called 'template strings' for a reason. I think.
+// They are called 'template strings' for a reason. I think.
 
 module.exports = (req, res) => {
   res.status(500).send(
