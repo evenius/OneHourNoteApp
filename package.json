@@ -1,0 +1,37 @@
+{
+  "name": "onehournoteapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evenius/OneHourNoteApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evenius/OneHourNoteApp/issues"
+  },
+  "homepage": "https://github.com/evenius/OneHourNoteApp#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-ensure-login": "^0.1.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "fast.js": "^0.1.1",
+    "mongoose": "^4.6.3",
+    "passport": "^0.3.2",
+    "passport-auth0": "^0.5.2",
+    "shortid": "^2.2.6"
+  }
+}
