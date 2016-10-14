@@ -3,7 +3,7 @@ const { connect } = require('react-redux')
 const { deleteNote } = require('../actions')
 
 function DeleteNoteButton ({ slug, onClick }) {
-  return (<button value={slug} onClick={onClick}>Delete note</button>)
+  return (<button value={slug} onClick={onClick}>⌫</button>)
 }
 
 function mapDispatchToProps (dispatch) {

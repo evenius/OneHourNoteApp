@@ -1,0 +1,18 @@
+body, body > div {
+  background: #F2F2F5;
+  height: 100%;
+  width: 100%;
+
+  p, a, textarea, button {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, p, a, textarea, button {
+    color: #1E1E1E;
+    font-family: 'Helvetica Neue', Helvetica, roboto, arial, sans-serif;
+    font-weight: 300;
+  }
+  button {
+    cursor: pointer;
+  }
+}

@@ -4,6 +4,8 @@ const { Route, Router, browserHistory } = require('react-router')
 const Header = require('../containers/Header')
 const Notes = require('../containers/Notes')
 
+require('./scss/main.scss')
+
 // Note: Props.children will almost always be ../containers/NoteView
 module.exports = (props) => {
   return (<div>

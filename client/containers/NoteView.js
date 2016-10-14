@@ -27,8 +27,7 @@ function NoteView ({note, onChange}) {
   let { slug, text } = note
   return (
     <div className='noteView'>
-      <h2>Okey</h2>
-     <TextArea value={text || ''} onChange={onChange} />
+     <TextArea value={text || ''} placeholder='Start typing here...' onChange={onChange} />
    </div>)
 }
 

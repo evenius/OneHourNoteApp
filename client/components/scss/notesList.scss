@@ -1,0 +1,39 @@
+.notesList {
+  width: 95%;
+  ul {
+    padding: 0;
+  }
+  li {
+    display: block;
+    margin: 20px 0;
+    list-style: none;
+  }
+  a {
+    display: inline-block;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+
+    color: #695AFF;
+    font-size: 26px;
+    text-decoration: none;
+    &:hover:not(.active),
+    &:focus:not(.active), {
+      color: darken(#695AFF, 10%);
+      text-decoration: underline;
+    }
+    &.active, .active {
+      color: #1E1E1E;
+    }
+  }
+  button {
+    display: inline;
+    background: none;
+    border: none;
+    color: #FF5A5A;
+    &:hover, &:focus, &:active {
+      color: lighten(#FF5A5A, 10%);
+    }
+  }
+}
