@@ -2,7 +2,8 @@
 Just a quick proof of the concept that I'm familiar with react and the node backend
 
 ## How do I set it up?
-You _need_ to have an instance of mongod running on your system
+You _need_ to have an instance of mongod running on your system,
+or otherwise use docker
 After that, make sure you `npm install`
 
 Then you can run `npm run build` followed by `npm start`
@@ -21,3 +22,12 @@ Turns on the server with nodemon!
 
 ### `npm run test`
 Runs all my unit tests, hopefully they'll still pass
+
+## What about docker?
+Run
+
+`docker-compose build`
+
+followed by
+
+`docker-compose up`

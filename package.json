@@ -4,9 +4,9 @@
   "description": "Its a quick app to do notes in react redux, with backend",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w & npm run start",
+    "dev": "webpack -w & nodemon . --watch server",
     "build": "webpack",
-    "start": "nodemon . --watch server",
+    "start": "node .",
     "test": "npm run unit",
     "unit": "mocha './**/__tests__/**/*Spec.js' --compilers js:babel-core/register --require ignore-styles"
   },
@@ -58,6 +58,7 @@
     "fast.js": "^0.1.1",
     "immutable": "^3.8.1",
     "mongoose": "^4.6.3",
+    "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-auth0": "^0.5.2",
     "redux-router": "^2.1.2",
