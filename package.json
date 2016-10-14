@@ -1,11 +1,14 @@
 {
   "name": "onehournoteapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Its a quick app to do notes in react redux, with backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "unit": "mocha './**/__tests__/**/*Spec.js'"
+    "dev": "webpack -w & npm run start",
+    "build": "webpack",
+    "start": "nodemon . --watch server",
+    "test": "npm run unit",
+    "unit": "mocha './**/__tests__/**/*Spec.js' --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -20,11 +23,30 @@
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.25.0",
+    "enzyme": "^2.4.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "style-loader": "^0.13.1"
     "mocha": "^3.1.2",
+    "node-sass": "^3.10.1",
+    "normalize.css": "^5.0.0",
+    "react": "^15.3.2",
+    "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-textarea-autosize": "^4.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.2",
     "sinon": "^1.17.6",
+    "sinon-promise": "^0.1.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "whatwg-fetch": "^1.0.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
