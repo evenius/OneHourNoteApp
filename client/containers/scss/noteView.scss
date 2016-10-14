@@ -1,0 +1,9 @@
+.noteView {
+  width: 50%;
+  float:left;
+  border-left: 1px solid #ccc;
+  textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+}
