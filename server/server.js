@@ -28,7 +28,7 @@ const startServer = function (config) {
 
   // aaand let's go!
   app.listen(config.nodePort, function () {
-    console.log(`Proser is now listening on http://localhost:${config.nodePort}`)
+    console.log(`NoteApp is now listening on http://localhost:${config.nodePort}`)
   })
 }
 
