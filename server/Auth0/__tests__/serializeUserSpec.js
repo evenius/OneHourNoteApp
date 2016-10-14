@@ -9,11 +9,12 @@ describe('user serialization', function () {
   it('receives a user from... Auth0, and tries to save it', function () {
     // setup
     let callback = spy()
+    let mockDb = db(WORKING)
     // exec
-    serializeUser(db(WORKING), {id: '123'}, callback)
+    serializeUser(mockDb, {id: '123'}, callback)
 
     // assertions
-    expect(db.User.findOneAndUpdate.calledOnce).to.equal(true)
+    expect(mockDb.User.findOneAndUpdate.calledOnce).to.equal(true)
     expect(callback.calledOnce).to.equal(true)
   })
 })
