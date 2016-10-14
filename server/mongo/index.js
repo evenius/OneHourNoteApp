@@ -10,7 +10,7 @@ class Client {
         this[modelName] = models[modelName]
       }
     }
-    mongoose.connect(databaseUri)
+    mongoose.connect(databaseUri + '/OneHourNoteApp')
   }
 }
 
