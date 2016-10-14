@@ -1,6 +1,8 @@
 # OneHourNoteApp
 Just a quick proof of the concept that I'm familiar with react and the node backend
 
+![A screenshot of the app](appScreen.png?raw=true "Does this look good to you? Asking for a friend")
+
 ## How do I set it up?
 You _need_ to have an instance of mongod running on your system,
 or otherwise use docker
