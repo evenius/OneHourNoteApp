@@ -20,7 +20,6 @@ function mapDispatchToProps(dispatch, currentProps) {
 }
 
 function NoteView ({note, onChange}) {
-
   if (!note) {
     return (<div className='noteView'><h2>No note selected</h2></div>)
   }
@@ -29,7 +28,7 @@ function NoteView ({note, onChange}) {
   return (
     <div className='noteView'>
       <h2>Okey</h2>
-     <TextArea value={text} onChange={onChange} />
+     <TextArea value={text || ''} onChange={onChange} />
    </div>)
 }
 
