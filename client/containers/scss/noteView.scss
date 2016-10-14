@@ -1,20 +1,25 @@
 .noteView {
   float: left;
-  width: 50%;
   height: 100%;
   border-left: 1px solid #ccc;
+
+  width: 50%;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+
   h2 {
     color: lighten(#1E1E1E, 10%);
   }
   textarea {
     font-size: 20px;
-    padding: 10px;
-    width: 100%;
+    padding: 20px 2%;
+    width: 86%;
     min-height: 100px;
     min-height: 50vh;
     background: white;
     border: none;
     box-shadow: none;
-    margin-left: 5%;
+    margin: 0 5% 5%;
   }
 }

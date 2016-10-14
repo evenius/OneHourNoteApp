@@ -15,4 +15,19 @@ body, body > div {
   button {
     cursor: pointer;
   }
+  @media (max-width: 450px) {
+    #root>div{
+      display: flex;
+      flex-direction: column;
+      header {
+        order:1;
+      }
+      .noteView {
+        order:2;
+      }
+      .notes {
+        order:3;
+      }
+    }
+  }
 }

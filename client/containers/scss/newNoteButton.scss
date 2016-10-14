@@ -1,5 +1,8 @@
 .newNoteButton {
   width: 40%;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
   border: none;
 
   /* Rectangle 3: */
