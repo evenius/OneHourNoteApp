@@ -12,9 +12,9 @@ const deleteNote = function (req, res) {
   // Just like that
   db.Note.remove({creator: user._id, slug}, (err, result) => {
     if (err) {
-      return res.status(500).send('error')
+      res.status(500).send('error')
     }
-    return res.send('ok')
+    res.send('ok')
   })
 }
 

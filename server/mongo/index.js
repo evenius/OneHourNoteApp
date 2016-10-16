@@ -11,6 +11,7 @@ class Client {
       }
     }
     mongoose.connect(databaseUri + '/OneHourNoteApp')
+    mongoose.Promise = global.Promise
   }
 }
 
