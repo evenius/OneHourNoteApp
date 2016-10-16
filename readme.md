@@ -25,6 +25,10 @@ Turns on the server with nodemon!
 ### `npm run test`
 Runs all my unit tests, hopefully they'll still pass
 
+### `npm run clearSession`
+Empties all json files from ./sessions, and confuses the app.
+It will clear all active sessions
+
 ## What about docker?
 Run
 
