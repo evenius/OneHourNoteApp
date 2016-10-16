@@ -1,8 +1,6 @@
 const Express = require('express')
 const { join } = require('path')
 
-const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn('/login')
-
 const getIndex = require('./routes/getIndex')
 const getLogin = require('./routes/getLogin')
 const postNote = require('./routes/postNote')
@@ -10,6 +8,7 @@ const patchNote = require('./routes/patchNote')
 const deleteNote = require('./routes/deleteNote')
 const getAuthCallback = require('./routes/getAuthCallback')
 
+const ensureLoggedIn = require('./middleware/ensureLoggedIn')
 
 /**
  * Bind all the above routes, it's not smart, but it's something
