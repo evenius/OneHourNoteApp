@@ -8,6 +8,7 @@
     "build": "webpack",
     "start": "node .",
     "test": "npm run unit",
+    "clearSession": "find ./sessions -name '*.json' -delete",
     "unit": "mocha './**/__tests__/**/*Spec.js' --compilers js:babel-core/register --require ignore-styles"
   },
   "repository": {
